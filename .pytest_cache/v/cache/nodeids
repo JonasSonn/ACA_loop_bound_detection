@@ -1,0 +1,6 @@
+[
+  "test_class.py::test_test",
+  "test_class.py::test_ae_simple_loop_simple_update",
+  "test_class.py::test_ae_auto_update",
+  "test_class.py::test_expression_parsing_for_loop"
+]
