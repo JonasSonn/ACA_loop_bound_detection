@@ -8,10 +8,14 @@ import test_class as tc
 import examples as ex
 import get_loop as gl
 import scopegraph_simple as sg_s
-
+import calc_bound as cb
 if __name__ == "__main__":
     
-    sg_s.init_graphs()
+    sg = sg_s.init_graphs()
+    assert type(sg) == nx.DiGraph
+    bounds = cb.calc_bound_no_nest_handle(sg)
+    print (bounds)
+    
     #tc.test_ae_auto_update()
     
     #meat = gl.get_simple_for_loop("cloops/forloop.c")

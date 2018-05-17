@@ -39,7 +39,7 @@ def abstract_execution_for_simple_loop(abs_state, update_expression, condition, 
             new_list.append(i)
             
         
-    #print(new_list)
+    print(new_list)
     abs_state._abstract_store = new_list
     #print(abs_state._abstract_store)
     #print(abs_state._recorder)
