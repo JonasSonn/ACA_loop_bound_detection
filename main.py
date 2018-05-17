@@ -4,17 +4,23 @@ Created on Tue May 15 15:49:18 2018
 
 @author: moth
 """
+
 import test_class as tc
 import examples as ex
 import get_loop as gl
 import scopegraph_simple as sg_s
 import calc_bound as cb
+import readcfg as rcfg
+
 if __name__ == "__main__":
     
+    
+    sg_file = rcfg.createGraph("example2_cfg.cfg")
     sg = sg_s.init_graphs()
+    
     assert type(sg) == nx.DiGraph
-    bounds = cb.calc_bound_no_nest_handle(sg)
-    print (bounds)
+    bounds = cb.calc_bound_no_nest_handle(sg_file)
+    print ("Loop bounds found: {0}".format(bounds))
     
     #tc.test_ae_auto_update()
     

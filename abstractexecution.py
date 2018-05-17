@@ -11,6 +11,12 @@ def abstract_execution(abs_state):
     abstract_state._program_point = abstract_state_._program_point + 1
     
 def abstract_execution_for_simple_loop(abs_state, update_expression, condition, new_scope_flag):
+    #if (update_expression == -1) :
+     #   print (update_expression)
+    #    print ("no update expression, return state")
+    #    return abs_state
+    #print("should no be called")
+    
     if(new_scope_flag) :
         abs_state._recorder = 1
     else :
@@ -39,7 +45,7 @@ def abstract_execution_for_simple_loop(abs_state, update_expression, condition, 
             new_list.append(i)
             
         
-    print(new_list)
+    #print(new_list)
     abs_state._abstract_store = new_list
     #print(abs_state._abstract_store)
     #print(abs_state._recorder)

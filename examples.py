@@ -12,13 +12,11 @@ import abstractexecution as abex
 def example_get_bound(expression_, condition_):
         
         
-        i_stack = (0)
         recorder = 1
-        program_point = 0;
         abstract_store = list(range(1, 5000))     
         
         
-        state = abst.AbstractState(i_stack, recorder, program_point, abstract_store)
+        state = abst.AbstractState(recorder, abstract_store)
         flag = True
         #i = 1
         while(len(state._abstract_store)):
